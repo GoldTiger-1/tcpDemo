@@ -296,25 +296,6 @@ int main(int argc,char *argv[])
     // int  iLocalTime =0;
     // int  iLocalTime2 =0;
 
-    // unsigned char sSendBuf[1024];
-	// memset(sSendBuf,0,sizeof(sSendBuf));
-	// sSendBuf[0] = 2;
-	// sSendBuf[3] = 0Xc3;
-	// sSendBuf[4] = 0X1;
-	// sSendBuf[6] = 0X4;
-	// sSendBuf[7] = 0X4c;
-	// sSendBuf[9] = 0X1;
-	// sSendBuf[12] = 0X10;
-	// sSendBuf[13] = 0X05;
-	// sSendBuf[19] = 0X1;
-	// sSendBuf[21] = 0Xad;
-	// sSendBuf[25] = 0X19;
-	// sSendBuf[27] = 0X11;
-	// sSendBuf[29] = 0Xa9;
-    // for(int i=30;i<1024;i++)
-    // {
-    //     sSendBuf[i]='a'+i%100;
-    // }
     sleep(1);
     int count = 100000;
     int number=0;
