@@ -402,6 +402,6 @@ int main(int argc,char *argv[])
     }
 
     // close(sock_fd);
-    // close(dev);
+    // shutdown(sock_fd);
     return 0;
 }
