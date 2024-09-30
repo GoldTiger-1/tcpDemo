@@ -331,10 +331,6 @@ int main(int argc,char *argv[])
 
             if (events[i].events & EPOLLOUT) 
             {
-                // if(number%100){
-                //     number++;
-                //     continue;
-                // }
                 // printf("[%d] EPOLLOUT Event.\n",__LINE__);
                 if ((nSockfd = events[i].data.fd) < 0)
                 {
@@ -363,10 +359,7 @@ int main(int argc,char *argv[])
                 sprintf(szSendBuf,"%ld",ts11);
                 // printf("ts11=%ld szSendBuf=%s\n",ts11,szSendBuf);
                 nSendNum = sendmsg(nSockfd, &msg, 0);
-                // count--;
-                // printf("count=%d\n",count);
-                // if(count<0)
-                //     return 0;
+                
                 // gettime(iLocalTime2);
                 // ts22 = T.rdns();
                 // printf("sendmsg latency:%ld ns\n",ts22-ts11);
