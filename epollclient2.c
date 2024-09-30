@@ -62,8 +62,7 @@ void gettime(int &lt)
 int main(int argc,char *argv[])
 {
     T.init(2000000000,3000000000);
-    int pipefd[2];
-    int fd9 = pipe(pipefd);
+
     int sock_fd;
     sock_fd = socket(AF_INET,SOCK_STREAM,0);
     if(sock_fd < 0)
@@ -71,48 +70,6 @@ int main(int argc,char *argv[])
         printf("[%s %d] Socket Create fail return:%d!\n", __FUNCTION__, __LINE__, sock_fd);
         return 0;
     } 
-
-// int efd = eventfd(0, 0);
-// printf("\033[**31m**红色\033[**0m**");
-//     int sock_fd33 = socket(AF_INET,SOCK_STREAM,0);
-//     struct sockaddr_in local_addr;
-//     local_addr.sin_family = AF_INET;
-//     local_addr.sin_addr.s_addr = inet_addr("172.16.38.104");
-//     local_addr.sin_port = 0;
-//     printf("first bind\n");
-//     if (bind(sock_fd33, (struct sockaddr*)&local_addr, sizeof(local_addr)) < 0) {
-//       printf("port bind fail\n");
-//       printf("errno=%d %s\n",errno,strerror(errno));
-//       return -1;
-//     }
-//     struct sockaddr_in localaddr2;
-//     memset(&localaddr2,0,sizeof(localaddr2));
-//     socklen_t addrlen2=sizeof(localaddr2);
-//     int retgs22 = getsockname(sock_fd33,(struct sockaddr *)&localaddr2,&addrlen2);
-//     if(retgs22==0){
-//         printf("getsock localaddr=%d %s:%d\n",sock_fd33,inet_ntoa(((struct sockaddr_in*)&localaddr2)->sin_addr),ntohs(((struct sockaddr_in*)&localaddr2)->sin_port));
-//     }
-//     else{
-//         printf("getsockname fail\n");
-//     }
-// close(sock_fd33);
-
-
-
-// sock_fd33=socket(AF_INET,SOCK_STREAM,0);
-//     printf("second bind\n");
-//     if (bind(sock_fd33, (struct sockaddr*)&local_addr, sizeof(local_addr)) < 0) {
-//       printf("port bind fail\n");
-//     //   printf("errno=%d %s\n",errno,strerror(errno));
-//     }
-//     retgs22 = getsockname(sock_fd33,(struct sockaddr *)&localaddr2,&addrlen2);
-//     if(retgs22==0){
-//         printf("2getsock localaddr=%d %s:%d\n",sock_fd33,inet_ntoa(((struct sockaddr_in*)&localaddr2)->sin_addr),ntohs(((struct sockaddr_in*)&localaddr2)->sin_port));
-//     }
-//     else{
-//         printf("getsockname fail\n");
-//     }
-    
 
     struct sockaddr_in addr_serv;//服务器端地址
     memset(&addr_serv,0,sizeof(addr_serv));
